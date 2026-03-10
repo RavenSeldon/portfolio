@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ben Amuwo — Software Developer & Technical Builder based in Vancouver, BC. Portfolio of web applications, research interests, and open-source work.">
+    <title>Ben Amuwo — Software Developer</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        surface: '#FAFAFA',
+                        ink: '#111111',
+                        muted: '#6B7280',
+                        accent: '#4F5D8A',
+                        rule: '#E5E5E5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        label: '0.12em',
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Base reset & smoothing */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: #FAFAFA;
+            color: #111111;
+        }
+
+        /* Selection color */
+        ::selection {
+            background-color: #4F5D8A;
+            color: #FAFAFA;
+        }
+
+        /* Subtle fade-in on load */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+
+        .delay-1 { animation-delay: 0.08s; }
+        .delay-2 { animation-delay: 0.16s; }
+        .delay-3 { animation-delay: 0.24s; }
+        .delay-4 { animation-delay: 0.36s; }
+        .delay-5 { animation-delay: 0.48s; }
+        .delay-6 { animation-delay: 0.60s; }
+
+        /* Project card lift */
+        .card-lift {
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                        box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .card-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Link transitions */
+        .link-subtle {
+            transition: color 0.25s ease, border-color 0.25s ease;
+        }
+
+        .link-subtle:hover {
+            color: #4F5D8A;
+        }
+
+        /* Icon link hover */
+        .icon-link {
+            transition: color 0.25s ease, transform 0.25s ease;
+        }
+
+        .icon-link:hover {
+            color: #4F5D8A;
+            transform: translateY(-1px);
+        }
+
+        /* Repo row hover */
+        .repo-row {
+            transition: background-color 0.2s ease;
+        }
+
+        .repo-row:hover {
+            background-color: rgba(0, 0, 0, 0.015);
+        }
+
+        /* Tech tag */
+        .tech-tag {
+            font-size: 0.6875rem;
+            letter-spacing: 0.04em;
+            padding: 0.25rem 0.625rem;
+            border: 1px solid #E5E5E5;
+            border-radius: 2px;
+            color: #6B7280;
+            transition: border-color 0.25s ease, color 0.25s ease;
+            line-height: 1;
+            white-space: nowrap;
+        }
+
+        .card-lift:hover .tech-tag {
+            border-color: #D1D5DB;
+        }
+
+        /* Horizontal rule styling */
+        .rule {
+            border: none;
+            border-top: 1px solid #E5E5E5;
+        }
+
+        /* Print styles */
+        @media print {
+            body { background: white; }
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen">
+
+    <!-- ============================================ -->
+    <!-- HEADER / HERO                                -->
+    <!-- ============================================ -->
+    <header class="pt-16 pb-20 sm:pt-24 sm:pb-28 md:pt-32 md:pb-36">
+        <div class="max-w-2xl mx-auto px-6 sm:px-8">
+
+            <!-- Name -->
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-800 tracking-tight leading-none animate-in">
+                Ben Amuwo
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="mt-4 sm:mt-5 text-base sm:text-lg font-300 text-muted leading-relaxed max-w-md animate-in delay-1">
+                Software Developer &amp; Technical Builder<br class="hidden sm:block"> based in Vancouver, BC.
+            </p>
+
+            <!-- Icon Links -->
+            <nav aria-label="External profiles and contact" class="mt-8 flex items-center gap-5 animate-in delay-2">
+                <a href="https://github.com/RavenSeldon"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="icon-link text-ink"
+                   aria-label="GitHub profile">
+                    <i data-lucide="github" class="w-[18px] h-[18px] sm:w-5 sm:h-5"></i>
+                </a>
+                <a href="mailto:hello@benamuwo.com"
+                   class="icon-link text-ink"
+                   aria-label="Send email">
+                    <i data-lucide="mail" class="w-[18px] h-[18px] sm:w-5 sm:h-5"></i>
+                </a>
+                <a href="/resume.pdf"
+                   download
+                   class="icon-link text-ink"
+                   aria-label="Download resume">
+                    <i data-lucide="file-text" class="w-[18px] h-[18px] sm:w-5 sm:h-5"></i>
+                </a>
+
+                <!-- Divider -->
+                <span class="w-px h-4 bg-rule mx-1" aria-hidden="true"></span>
+
+                <!-- Resume text link (desktop) -->
+                <a href="/resume.pdf"
+                   download
+                   class="hidden sm:inline-block text-xs font-500 tracking-label uppercase text-muted link-subtle">
+                    Résumé ↓
+                </a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- ============================================ -->
+        <!-- FEATURED WEB APPS                            -->
+        <!-- ============================================ -->
+        <section aria-labelledby="projects-heading" class="pb-20 sm:pb-28">
+            <div class="max-w-2xl mx-auto px-6 sm:px-8">
+
+                <h2 id="projects-heading"
+                    class="text-[0.6875rem] font-600 tracking-label uppercase text-muted mb-8 sm:mb-10 animate-in delay-3">
+                    Featured Web Apps
+                </h2>
+
+                <div class="space-y-5 sm:space-y-6">
+
+                    <!-- Project 1: Bookworm -->
+                    <article class="card-lift border border-rule rounded-sm p-6 sm:p-8 animate-in delay-3">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
+                            <h3 class="text-lg sm:text-xl font-700 tracking-tight">
+                                Bookworm
+                            </h3>
+                            <a href="https://bookworm.guide"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="text-xs font-500 tracking-wide text-muted link-subtle flex items-center gap-1 shrink-0 mt-0.5 sm:mt-1">
+                                bookworm.guide
+                                <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                        <p class="mt-3 text-sm font-300 text-muted leading-relaxed max-w-lg">
+                            An interactive community mapping platform designed to increase local literacy by helping users locate and update free tiny libraries in real-time.
+                        </p>
+                        <div class="mt-5 flex flex-wrap gap-2">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Geospatial APIs</span>
+                            <span class="tech-tag">Firebase</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: The Human Project -->
+                    <article class="card-lift border border-rule rounded-sm p-6 sm:p-8 animate-in delay-4">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
+                            <h3 class="text-lg sm:text-xl font-700 tracking-tight">
+                                The Human Project
+                            </h3>
+                            <a href="https://human-project.vercel.app"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="text-xs font-500 tracking-wide text-muted link-subtle flex items-center gap-1 shrink-0 mt-0.5 sm:mt-1">
+                                human-project.vercel.app
+                                <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                        <p class="mt-3 text-sm font-300 text-muted leading-relaxed max-w-lg">
+                            A centralized hub for a high-impact donation drive, orchestrating logistics and data visibility for partner donor organizations.
+                        </p>
+                        <div class="mt-5 flex flex-wrap gap-2">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">Vercel</span>
+                            <span class="tech-tag">Partner Integrations</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================ -->
+        <!-- CURRENT RESEARCH & INTERESTS                 -->
+        <!-- ============================================ -->
+        <section aria-labelledby="research-heading" class="pb-20 sm:pb-28">
+            <div class="max-w-2xl mx-auto px-6 sm:px-8">
+
+                <hr class="rule mb-16 sm:mb-20 animate-in delay-4">
+
+                <h2 id="research-heading"
+                    class="text-[0.6875rem] font-600 tracking-label uppercase text-muted mb-8 sm:mb-10 animate-in delay-4">
+                    Current Research &amp; Interests
+                </h2>
+
+                <div class="space-y-6 animate-in delay-5">
+                    <article class="flex items-start gap-4">
+                        <span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-accent shrink-0" aria-hidden="true"></span>
+                        <div>
+                            <h3 class="text-sm sm:text-base font-600 tracking-tight">
+                                Machine Learning &amp; Neural Network Programming
+                            </h3>
+                            <p class="mt-1.5 text-sm font-300 text-muted leading-relaxed max-w-md">
+                                Self-directed study in neural network architectures, gradient-based optimization, and applied ML—building implementations from scratch to develop deep mechanical intuition.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="flex items-start gap-4">
+                        <span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-accent shrink-0" aria-hidden="true"></span>
+                        <div>
+                            <h3 class="text-sm sm:text-base font-600 tracking-tight">
+                                Community-Scale Software Systems
+                            </h3>
+                            <p class="mt-1.5 text-sm font-300 text-muted leading-relaxed max-w-md">
+                                Exploring how lightweight, well-designed tools can serve communities that are often underserved by commercial software—particularly in civic infrastructure and resource access.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================ -->
+        <!-- TECHNICAL REPOSITORIES                       -->
+        <!-- ============================================ -->
+        <section aria-labelledby="repos-heading" class="pb-24 sm:pb-32">
+            <div class="max-w-2xl mx-auto px-6 sm:px-8">
+
+                <hr class="rule mb-16 sm:mb-20 animate-in delay-5">
+
+                <h2 id="repos-heading"
+                    class="text-[0.6875rem] font-600 tracking-label uppercase text-muted mb-8 sm:mb-10 animate-in delay-5">
+                    Technical Repositories
+                </h2>
+
+                <div class="border border-rule rounded-sm divide-y divide-rule animate-in delay-6">
+
+                    <!-- Repo 1 -->
+                    <a href="https://github.com/RavenSeldon/algorithm-visualizer"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="repo-row flex items-center justify-between px-5 sm:px-6 py-4 group">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="folder-git-2" class="w-4 h-4 text-muted shrink-0"></i>
+                            <span class="text-sm font-500 tracking-tight">Algorithm Visualizer</span>
+                        </div>
+                        <span class="text-xs font-500 tracking-wide text-muted link-subtle flex items-center gap-1">
+                            View Source
+                            <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                        </span>
+                    </a>
+
+                    <!-- Repo 2 -->
+                    <a href="https://github.com/RavenSeldon/beamu-blog"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="repo-row flex items-center justify-between px-5 sm:px-6 py-4 group">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="folder-git-2" class="w-4 h-4 text-muted shrink-0"></i>
+                            <span class="text-sm font-500 tracking-tight">beamu-blog</span>
+                        </div>
+                        <span class="text-xs font-500 tracking-wide text-muted link-subtle flex items-center gap-1">
+                            View Source
+                            <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                       -->
+    <!-- ============================================ -->
+    <footer class="pb-12 sm:pb-16">
+        <div class="max-w-2xl mx-auto px-6 sm:px-8">
+            <hr class="rule mb-8">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <p class="text-xs font-400 text-muted">
+                    <time datetime="2026">© 2026</time> Ben Amuwo
+                </p>
+                <p class="text-xs font-300 text-muted">
+                    Built with care in Vancouver, BC.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
