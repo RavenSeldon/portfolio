@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ben Amuwo | Musqueam, Squamish, and Tsleil-Waututh Nations | Portfolio of web applications, research interests, and open-source work.">
-    <title>Ben Amuwo — Portfolio</title>
+
+    <meta
+        name="description"
+        content="Ben Amuwo — independent computational researcher and developer working across computational cognition, human-centred AI, civic technology, and community-scale systems."
+    >
+
+    <title>Ben Amuwo — Computational Research, Community, and Humane Futures</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,6 +23,7 @@
                         muted: '#6B7280',
                         accent: '#4F5D8A',
                         rule: '#E5E5E5',
+                        soft: '#F5F6F8',
                     },
                     fontFamily: {
                         sans: ['"Space Mono"', 'ui-monospace', 'monospace'],
@@ -33,7 +39,10 @@
     <!-- Space Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
 
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -45,8 +54,9 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        /* Base reset & smoothing */
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -64,18 +74,17 @@
             color: #111111;
         }
 
-        /* Selection color */
         ::selection {
             background-color: #4F5D8A;
             color: #FAFAFA;
         }
 
-        /* Subtle fade-in on load */
         @keyframes fadeUp {
             from {
                 opacity: 0;
                 transform: translateY(12px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -91,20 +100,20 @@
         .delay-3 { animation-delay: 0.24s; }
         .delay-4 { animation-delay: 0.36s; }
         .delay-5 { animation-delay: 0.48s; }
-        .delay-6 { animation-delay: 0.60s; }
 
-        /* Project card lift */
         .card-lift {
-            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-                        box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            transition:
+                transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .card-lift:hover {
-            transform: translateY(-4px);
+            transform: translateY(-3px);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+            border-color: #D1D5DB;
         }
 
-        /* Link transitions */
         .link-subtle {
             transition: color 0.25s ease, border-color 0.25s ease;
         }
@@ -113,7 +122,6 @@
             color: #4F5D8A;
         }
 
-        /* Icon link hover */
         .icon-link {
             transition: color 0.25s ease, transform 0.25s ease;
         }
@@ -123,42 +131,72 @@
             transform: translateY(-1px);
         }
 
-        /* Repo row hover */
         .repo-row {
             transition: background-color 0.2s ease;
         }
 
         .repo-row:hover {
-            background-color: rgba(0, 0, 0, 0.015);
+            background-color: rgba(79, 93, 138, 0.035);
         }
 
-        /* Tech tag */
         .tech-tag {
             font-size: 0.6875rem;
             letter-spacing: 0.04em;
-            padding: 0.25rem 0.625rem;
+            padding: 0.3rem 0.65rem;
             border: 1px solid #E5E5E5;
             border-radius: 2px;
             color: #6B7280;
-            transition: border-color 0.25s ease, color 0.25s ease;
             line-height: 1;
             white-space: nowrap;
         }
 
-        .card-lift:hover .tech-tag {
-            border-color: #D1D5DB;
+        .research-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.75rem;
+            color: #111111;
+            border-bottom: 1px solid #D1D5DB;
+            padding-bottom: 0.15rem;
+            transition: color 0.2s ease, border-color 0.2s ease;
         }
 
-        /* Horizontal rule styling */
+        .research-link:hover {
+            color: #4F5D8A;
+            border-color: #4F5D8A;
+        }
+
         .rule {
             border: none;
             border-top: 1px solid #E5E5E5;
         }
 
-        /* Print styles */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid #4F5D8A;
+            outline-offset: 4px;
+            border-radius: 2px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
         @media print {
-            body { background: white; }
-            .no-print { display: none; }
+            body {
+                background: white;
+            }
+
+            .no-print {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -166,49 +204,80 @@
 <body class="min-h-screen">
 
     <!-- ============================================ -->
-    <!-- HEADER / HERO                                -->
+    <!-- HEADER                                       -->
     <!-- ============================================ -->
-    <header class="pt-14 pb-12 sm:pt-20 sm:pb-16 md:pt-20 md:pb-16">
-        <div class="max-w-2xl mx-auto px-6 sm:px-8">
+    <header class="pt-14 pb-12 sm:pt-20 sm:pb-16">
+        <div class="max-w-3xl mx-auto px-6 sm:px-8">
 
-            <!-- Name -->
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-none animate-in">
+            <h1
+                class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-none animate-in"
+            >
                 Ben Amuwo
             </h1>
 
-            <!-- Subtitle -->
-            <p class="mt-4 sm:mt-5 text-base sm:text-base font-normal text-muted leading-relaxed max-w-md animate-in delay-1">
-                Developer and Community Builder<br class="hidden sm:block"> Portfolio
+            <p
+                class="mt-5 text-sm sm:text-base font-normal text-muted leading-relaxed max-w-2xl animate-in delay-1"
+            >
+                <span class="text-ink">
+                    Computational Research · Community Building · Human-Centred AI
+                </span>
+                <br><br>
+                Biology-trained independent researcher and developer working across
+                computational cognition, machine learning, and community-scale systems.
             </p>
 
-            <!-- Icon Links -->
-            <nav aria-label="External profiles and contact" class="mt-8 flex items-center gap-5 animate-in delay-2">
-                <a href="https://github.com/RavenSeldon"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="icon-link text-ink"
-                   aria-label="GitHub profile">
-                    <i data-lucide="git-fork" class="w-[18px] h-[18px] sm:w-3 sm:h-3"></i>
+            <nav
+                aria-label="External profiles and contact"
+                class="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3 animate-in delay-2"
+            >
+                <a
+                    href="https://github.com/RavenSeldon"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="icon-link text-ink"
+                    aria-label="GitHub profile"
+                >
+                    <i data-lucide="git-fork" class="w-4 h-4"></i>
                 </a>
-                <a href="https://benamuwo.substack.com"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="icon-link text-ink"
-                   aria-label="Substack profile">
-                    <i data-lucide="bookmark" class="w-[18px] h-[18px] sm:w-3 sm:h-3"></i>
+
+                <a
+                    href="https://doi.org/10.5281/zenodo.22661563"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="icon-link text-ink"
+                    aria-label="Zenodo research record"
+                >
+                    <i data-lucide="archive" class="w-4 h-4"></i>
                 </a>
-                <a href="mailto:ben.amuwo@gmail.com"
-                   class="icon-link text-ink"
-                   aria-label="Send email">
-                    <i data-lucide="mail" class="w-[18px] h-[18px] sm:w-3 sm:h-3"></i>
+
+                <a
+                    href="https://benamuwo.substack.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="icon-link text-ink"
+                    aria-label="Substack profile"
+                >
+                    <i data-lucide="bookmark" class="w-4 h-4"></i>
                 </a>
-                <a href="resume.pdf"
-                   download
-                   class="icon-link text-ink"
-                   aria-label="Download resume">
-                    <i data-lucide="file-text" class="w-[18px] h-[18px] sm:w-3 sm:h-3"></i>
+
+                <a
+                    href="mailto:ben.amuwo@gmail.com"
+                    class="icon-link text-ink"
+                    aria-label="Send email"
+                >
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                </a>
+
+                <a
+                    href="resume.pdf"
+                    download
+                    class="icon-link text-ink"
+                    aria-label="Download resume"
+                >
+                    <i data-lucide="file-text" class="w-4 h-4"></i>
                 </a>
             </nav>
+
         </div>
     </header>
 
@@ -216,183 +285,616 @@
     <main>
 
         <!-- ============================================ -->
-        <!-- FEATURED WEB APPS                            -->
+        <!-- SELECTED PROJECTS                            -->
         <!-- ============================================ -->
-        <section aria-labelledby="projects-heading" class="pb-12 sm:pb-16">
-            <div class="max-w-2xl mx-auto px-6 sm:px-8">
+        <section
+            aria-labelledby="projects-heading"
+            class="pb-14 sm:pb-20"
+        >
+            <div class="max-w-3xl mx-auto px-6 sm:px-8">
 
-                <h2 id="projects-heading"
-                    class="text-[0.6875rem] font-bold tracking-label uppercase text-muted mb-8 sm:mb-10 animate-in delay-3">
-                    Featured Web Apps
+
+                <h2
+                    id="projects-heading"
+                    class="text-[0.6875rem] font-bold tracking-label uppercase text-muted mb-8"
+                >
+                    Selected Projects
                 </h2>
 
-                <div class="space-y-5 sm:space-y-6">
+                <div class="space-y-5">
 
-                    <!-- Project 1: Bookworm -->
-                    <article class="card-lift border border-rule rounded-sm p-6 sm:p-8 animate-in delay-3">
-                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
-                            <h3 class="text-lg sm:text-xl font-bold tracking-tight">
-                                Bookworm
-                            </h3>
-                            <a href="https://bookworm.guide"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="text-xs font-normal tracking-wide text-muted link-subtle flex items-center gap-1 shrink-0 mt-0.5 sm:mt-1">
+                    <!-- Bookworm -->
+                    <article
+                        class="card-lift border border-rule rounded-sm p-6 sm:p-8"
+                    >
+                        <div
+                            class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-5"
+                        >
+                            <div>
+                                <p
+                                    class="text-[0.6875rem] uppercase tracking-label text-accent font-bold"
+                                >
+                                    Civic Technology
+                                </p>
+
+                                <h3
+                                    class="mt-2 text-lg sm:text-xl font-bold tracking-tight"
+                                >
+                                    Bookworm
+                                </h3>
+                            </div>
+
+                            <a
+                                href="https://bookworm.guide"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-xs text-muted link-subtle flex items-center gap-1 shrink-0"
+                            >
                                 bookworm.guide
                                 <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
                             </a>
                         </div>
-                        <p class="mt-3 text-sm font-normal text-muted leading-relaxed max-w-lg">
-                            An interactive community mapping platform designed to help users locate and update free tiny libraries in real-time.
+
+                        <p
+                            class="mt-4 text-sm text-muted leading-relaxed max-w-2xl"
+                        >
+                            A free, non-commercial map for discovering and maintaining
+                            Little Free Library information across British Columbia.
+                            I built the GeoDjango application, geographic data workflow,
+                            community contribution system, and field-mapping process.
                         </p>
+
                         <div class="mt-5 flex flex-wrap gap-2">
                             <span class="tech-tag">Django</span>
-                            <span class="tech-tag">GeoDjango/GeoJSON</span>
-                            <span class="tech-tag">Community</span>
+                            <span class="tech-tag">GeoDjango</span>
+                            <span class="tech-tag">GIS</span>
+                            <span class="tech-tag">Community Infrastructure</span>
                         </div>
                     </article>
 
-                    <!-- Project 2: The Human Project -->
-                    <article class="card-lift border border-rule rounded-sm p-6 sm:p-8 animate-in delay-4">
-                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
-                            <h3 class="text-lg sm:text-xl font-bold tracking-tight">
-                                The HUMA-N Project
-                            </h3>
-                            <a href="https://humanproject.vercel.app"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="text-xs font-normal tracking-wide text-muted link-subtle flex items-center gap-1 shrink-0 mt-0.5 sm:mt-1">
-                                humanproject.vercel.app
+
+                    <!-- HUMA-N -->
+                    <article
+                        class="card-lift border border-rule rounded-sm p-6 sm:p-8"
+                    >
+                        <div
+                            class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-5"
+                        >
+                            <div>
+                                <p
+                                    class="text-[0.6875rem] uppercase tracking-label text-accent font-bold"
+                                >
+                                    Community Coordination
+                                </p>
+
+                                <h3
+                                    class="mt-2 text-lg sm:text-xl font-bold tracking-tight"
+                                >
+                                    The HUMA-N Project
+                                </h3>
+                            </div>
+
+                            <a
+                                href="https://humanproject.vercel.app"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-xs text-muted link-subtle flex items-center gap-1 shrink-0"
+                            >
+                                project archive
                                 <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
                             </a>
                         </div>
-                        <p class="mt-3 text-sm font-normal text-muted leading-relaxed max-w-lg">
+
+                        <p
+                            class="mt-4 text-sm text-muted leading-relaxed max-w-2xl"
+                        >
                             A scrapbook commemorating a high-impact, low-friction donation drive, with highlights for donators and
                             the partnered non-profit donor organizations.
                         </p>
+
                         <div class="mt-5 flex flex-wrap gap-2">
+                            <span class="tech-tag">Community Organizing</span>
+                            <span class="tech-tag">Frictionless Philanthropy</span>
                             <span class="tech-tag">Next.js</span>
-                            <span class="tech-tag">Vercel</span>
-                            <span class="tech-tag">Pilanthropy</span>
                         </div>
                     </article>
 
                 </div>
             </div>
         </section>
-         <!-- ============================================ -->
-        <!-- TECHNICAL REPOSITORIES                       -->
+
         <!-- ============================================ -->
-        <section aria-labelledby="repos-heading" class="pb-16 sm:pb-20">
-            <div class="max-w-2xl mx-auto px-6 sm:px-8">
+        <!-- FEATURED RESEARCH                            -->
+        <!-- ============================================ -->
+        <section
+            aria-labelledby="featured-research-heading"
+            class="pb-14 sm:pb-20"
+        >
+            <div class="max-w-3xl mx-auto px-6 sm:px-8">
 
-                <hr class="rule mb-10 sm:mb-12 animate-in delay-5">
+                <hr class="rule mb-10 sm:mb-12">
 
-                <h2 id="repos-heading"
-                    class="text-[0.6875rem] font-bold tracking-label uppercase text-muted mb-6 sm:mb-8 animate-in delay-5">
-                    Technical Repositories
+                <h2
+                    id="featured-research-heading"
+                    class="text-[0.6875rem] font-bold tracking-label uppercase text-muted mb-8 animate-in delay-2"
+                >
+                    Featured Research
                 </h2>
 
-                <div class="border border-rule rounded-sm divide-y divide-rule animate-in delay-6">
+                <article
+                    class="card-lift border border-rule rounded-sm p-6 sm:p-8 animate-in delay-3"
+                >
+                    <div
+                        class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-6"
+                    >
+                        <div>
+                            <p
+                                class="text-[0.6875rem] uppercase tracking-label text-accent font-bold"
+                            >
+                                Independent Computational Research · 2026
+                            </p>
 
-                    <!-- Repo 1 -->
-                    <a href="https://sidus.quest/research"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="repo-row flex items-center justify-between px-5 sm:px-6 py-4 group">
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="folder-git-2" class="w-4 h-4 text-muted shrink-0"></i>
-                            <span class="text-sm font-normal tracking-tight">Monitoring Under Scarcity</span>
+                            <h3
+                                class="mt-2 text-xl sm:text-2xl font-bold tracking-tight"
+                            >
+                                Monitoring Under Scarcity
+                            </h3>
+
+                            <p class="mt-1 text-xs sm:text-sm text-muted">
+                                From information to causal use in resource-bounded intelligent systems
+                            </p>
                         </div>
-                        <span class="text-xs font-normal tracking-wide text-muted link-subtle flex items-center gap-1">
-                            <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
-                        </span>
-                    </a>
 
-                    <!-- Repo 2 -->
-                    <a href="https://github.com/RavenSeldon/gpt-build"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="repo-row flex items-center justify-between px-5 sm:px-6 py-4 group">
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="folder-git-2" class="w-4 h-4 text-muted shrink-0"></i>
-                            <span class="text-sm font-normal tracking-tight">Learn to Code GPT</span>
+                        <a
+                            href="https://sidus.quest/research"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-xs text-muted link-subtle flex items-center gap-1 shrink-0"
+                        >
+                            Research overview
+                            <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                        </a>
+                    </div>
+
+                    <p
+                        class="mt-6 text-sm text-muted leading-relaxed max-w-2xl"
+                    >
+                        A ground-truth computational study testing whether information
+                        present in an internal monitoring channel can be distinguished
+                        from information that actually influences behaviour.
+                    </p>
+
+                    <p
+                        class="mt-4 text-sm text-muted leading-relaxed max-w-2xl"
+                    >
+                        E0-A uses exact enumeration, four quantitative acceptance criteria,
+                        eight adversarial controls, and 500 retained training initializations.
+                        The frozen experimental record and reproducibility archive are
+                        deposited on Zenodo.
+                    </p>
+
+                    <div
+                        class="mt-6 border-l-2 border-accent pl-4 py-1"
+                    >
+                        <p
+                            class="text-[0.6875rem] uppercase tracking-label text-muted font-bold"
+                        >
+                            Key result
+                        </p>
+
+                        <p
+                            class="mt-2 text-sm leading-relaxed max-w-2xl"
+                        >
+                            An informative-but-unused control carried the same hidden-state
+                            information as a successful system while producing zero
+                            behavioural benefit, separating information availability from
+                            causal use operationally.
+                        </p>
+                    </div>
+
+                    <div
+                        class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs"
+                    >
+                        <div class="border border-rule px-3 py-3">
+                            <span class="block text-muted">E0-A</span>
+                            <span class="block mt-1 font-bold">Completed</span>
                         </div>
-                        <span class="text-xs font-normal tracking-wide text-muted link-subtle flex items-center gap-1">
-                            <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
-                        </span>
-                    </a>
 
-                    <!-- Repo 2 -->
-                    <a href="https://benamuwo.me"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="repo-row flex items-center justify-between px-5 sm:px-6 py-4 group">
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="folder-git-2" class="w-4 h-4 text-muted shrink-0"></i>
-                            <span class="text-sm font-normal tracking-tight">Personal Website</span>
+                        <div class="border border-rule px-3 py-3">
+                            <span class="block text-muted">E1</span>
+                            <span class="block mt-1 font-bold">Proposed Master’s study</span>
                         </div>
-                        <span class="text-xs font-normal tracking-wide text-muted link-subtle flex items-center gap-1">
-                            <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
-                        </span>
-                    </a>
 
-                </div>
+                        <div class="border border-rule px-3 py-3">
+                            <span class="block text-muted">Broader Sīdus</span>
+                            <span class="block mt-1 font-bold">Outside thesis scope</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="mt-7 flex flex-wrap gap-x-5 gap-y-3"
+                    >
+                        <a
+                            href="https://sidus.quest/#/results/e0-a"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="research-link"
+                        >
+                            E0-A results
+                            <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                        </a>
+
+                        <a
+                            href="https://doi.org/10.5281/zenodo.22661563"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="research-link"
+                        >
+                            Zenodo archive
+                            <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                        </a>
+
+                        <a
+                            href="https://github.com/RavenSeldon/Sidus"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="research-link"
+                        >
+                            Source
+                            <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                        </a>
+
+                        <a
+                            href="https://sidus.quest"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="research-link"
+                        >
+                            Full Sīdus programme
+                            <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                        </a>
+                    </div>
+                </article>
+
             </div>
         </section>
 
-        <!-- ============================================ -->
-        <!-- CURRENT RESEARCH & INTERESTS                 -->
-        <!-- ============================================ -->
-        <section aria-labelledby="research-heading" class="pb-12 sm:pb-16">
-            <div class="max-w-2xl mx-auto px-6 sm:px-8">
 
-                <hr class="rule mb-10 sm:mb-12 animate-in delay-4">
+        <!-- ============================================ -->
+        <!-- CURRENT RESEARCH                             -->
+        <!-- ============================================ -->
+        <section
+            aria-labelledby="research-heading"
+            class="pb-14 sm:pb-20"
+        >
+            <div class="max-w-3xl mx-auto px-6 sm:px-8">
 
-                <h2 id="research-heading"
-                    class="text-[0.6875rem] font-bold tracking-label uppercase text-muted mb-6 sm:mb-8 animate-in delay-4">
-                    Current Research &amp; Interests
+                <hr class="rule mb-10 sm:mb-12">
+
+                <h2
+                    id="research-heading"
+                    class="text-[0.6875rem] font-bold tracking-label uppercase text-muted mb-7"
+                >
+                    Current Research
                 </h2>
 
-                <div class="space-y-6 animate-in delay-5">
-                    <article class="flex items-start gap-4">
-                        <span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-accent shrink-0" aria-hidden="true"></span>
-                        <div>
-                            <h3 class="text-sm sm:text-base font-bold tracking-tight">
-                                Machine Learning and Neural Network Programming
-                            </h3>
-                            <p class="mt-1.5 text-sm font-normal text-muted leading-relaxed max-w-md">
-                                Self-directed study in neural network architectures, gradient-based optimization, and applied ML—building implementations from scratch. I tried to build a philosopher GPT trained on Plato's "The Republic".
-                            </p>
-                        </div>
-                    </article>
+                <div class="max-w-2xl">
 
-                    <article class="flex items-start gap-4">
-                        <span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-accent shrink-0" aria-hidden="true"></span>
-                        <div>
-                            <h3 class="text-sm sm:text-base font-bold tracking-tight">
-                                Community-Scale Software Systems
-                            </h3>
-                            <p class="mt-1.5 text-sm font-normal text-muted leading-relaxed max-w-md">
-                                Exploring how lightweight, well-designed tools can bring together communities in underserved niches and through creative solutions. <a href="https://bookworm.guide">Bookworm.guide</a> is one such example.
-                            </p>
-                        </div>
+                    <p
+                        class="text-lg sm:text-xl font-bold leading-relaxed tracking-tight"
+                    >
+                        How do resource-bounded intelligent systems decide which
+                        internal information gets to influence behaviour?
+                    </p>
 
-                    </article> <article class="flex items-start gap-4">
-                        <span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-accent shrink-0" aria-hidden="true"></span>
-                        <div>
-                            <h3 class="text-sm sm:text-base font-bold tracking-tight">
-                                Scuba Diving and Ocean Conservation
-                            </h3>
-                            <p class="mt-1.5 text-sm font-normal text-muted leading-relaxed max-w-md">
-                                My lifelong romance with the oceans of the world led me to pursue scuba diving as a hobby. As a search-and-rescue certified diver, I aim to give back as a steward and guest of the marine world through reef restoration and ecological conservation projects.
-                                I'll be uploading video from my recent volunteer trip to Pom Pom Island's Tropical Research and Conservation Centre. The splendor of the abyss calls.
-                            </p>
-                        </div>
-                    </article>
+                    <p
+                        class="mt-5 text-sm text-muted leading-relaxed"
+                    >
+                        My current independent work focuses on the distinction between
+                        information availability and causal use. E0-A validates
+                        measurements for that distinction under known ground truth;
+                        the proposed E1 study asks what happens when several useful
+                        monitoring channels must compete for limited encoding or
+                        routing capacity.
+                    </p>
+
+                    <p
+                        class="mt-4 text-sm text-muted leading-relaxed"
+                    >
+                        I am particularly interested in computational bridges to
+                        attention, metacognitive control, information sampling,
+                        resource allocation, and human-centred intelligent systems.
+                    </p>
+
+                    <div class="mt-6 flex flex-wrap gap-x-5 gap-y-3">
+                        <a
+                            href="https://doi.org/10.5281/zenodo.22661563"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="research-link"
+                        >
+                            Research record
+                            <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                        </a>
+
+                        <a
+                            href="https://sidus.quest/#/document/2/frontpiece"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="research-link"
+                        >
+                            Master’s scoping document
+                            <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </section>
+
+
+        <!-- ============================================ -->
+        <!-- OPEN RESEARCH & SOFTWARE                     -->
+        <!-- ============================================ -->
+        <section
+            aria-labelledby="open-research-heading"
+            class="pb-14 sm:pb-20"
+        >
+            <div class="max-w-3xl mx-auto px-6 sm:px-8">
+
+                <hr class="rule mb-10 sm:mb-12">
+
+                <h2
+                    id="open-research-heading"
+                    class="text-[0.6875rem] font-bold tracking-label uppercase text-muted mb-7"
+                >
+                    Open Research &amp; Software
+                </h2>
+
+                <div
+                    class="border border-rule rounded-sm divide-y divide-rule"
+                >
+
+                    <a
+                        href="https://sidus.quest/research"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="repo-row flex items-center justify-between gap-4 px-5 sm:px-6 py-5"
+                    >
+                        <div class="flex items-start gap-3">
+                            <i
+                                data-lucide="archive"
+                                class="w-4 h-4 text-muted shrink-0 mt-0.5"
+                            ></i>
+
+                            <div>
+                                <span class="block text-sm font-bold tracking-tight">
+                                    Monitoring Under Scarcity
+                                </span>
+
+                                <span class="block mt-1 text-xs text-muted">
+                                    Research overview · E0-A results · E1 proposal
+                                </span>
+                            </div>
+                        </div>
+
+                        <i
+                            data-lucide="arrow-up-right"
+                            class="w-3 h-3 text-muted shrink-0"
+                        ></i>
+                    </a>
+
+
+                    <a
+                        href="https://github.com/RavenSeldon/Sidus"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="repo-row flex items-center justify-between gap-4 px-5 sm:px-6 py-5"
+                    >
+                        <div class="flex items-start gap-3">
+                            <i
+                                data-lucide="folder-git-2"
+                                class="w-4 h-4 text-muted shrink-0 mt-0.5"
+                            ></i>
+
+                            <div>
+                                <span class="block text-sm font-bold tracking-tight">
+                                    Sīdus experimental repository
+                                </span>
+
+                                <span class="block mt-1 text-xs text-muted">
+                                    Python · experimental infrastructure · reproducibility
+                                </span>
+                            </div>
+                        </div>
+
+                        <i
+                            data-lucide="arrow-up-right"
+                            class="w-3 h-3 text-muted shrink-0"
+                        ></i>
+                    </a>
+
+
+                    <a
+                        href="https://github.com/RavenSeldon"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="repo-row flex items-center justify-between gap-4 px-5 sm:px-6 py-5"
+                    >
+                        <div class="flex items-start gap-3">
+                            <i
+                                data-lucide="git-fork"
+                                class="w-4 h-4 text-muted shrink-0 mt-0.5"
+                            ></i>
+
+                            <div>
+                                <span class="block text-sm font-bold tracking-tight">
+                                    Earlier experiments &amp; software
+                                </span>
+
+                                <span class="block mt-1 text-xs text-muted">
+                                    Full GitHub profile
+                                </span>
+                            </div>
+                        </div>
+
+                        <i
+                            data-lucide="arrow-up-right"
+                            class="w-3 h-3 text-muted shrink-0"
+                        ></i>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================ -->
+        <!-- ABOUT                                        -->
+        <!-- ============================================ -->
+        <section
+            aria-labelledby="about-heading"
+            class="pb-14 sm:pb-20"
+        >
+            <div class="max-w-3xl mx-auto px-6 sm:px-8">
+
+                <hr class="rule mb-10 sm:mb-12">
+
+                <h2
+                    id="about-heading"
+                    class="text-[0.6875rem] font-bold tracking-label uppercase text-muted mb-7"
+                >
+                    About
+                </h2>
+
+                <div class="max-w-2xl space-y-4">
+
+                    <p class="text-sm text-muted leading-relaxed">
+                        I studied Biology with a minor in Psychology at the University
+                        of British Columbia, then worked in frontline harm reduction, then health systems, and now integrated
+                        youth services.
+                    </p>
+
+                    <p class="text-sm text-muted leading-relaxed">
+                        Alongside that work, I taught myself full-stack development and
+                        applied machine learning. My projects increasingly find the intersections between
+                        those strands: computational questions about intelligent
+                        systems, public-interest software, and tools that help people
+                        connect locally.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================ -->
+        <!-- BEYOND THE WORK                              -->
+        <!-- ============================================ -->
+        <section
+            aria-labelledby="beyond-heading"
+            class="pb-14 sm:pb-20"
+        >
+            <div class="max-w-3xl mx-auto px-6 sm:px-8">
+
+                <hr class="rule mb-10 sm:mb-12">
+
+                <h2
+                    id="beyond-heading"
+                    class="text-[0.6875rem] font-bold tracking-label uppercase text-muted mb-7"
+                >
+                    Beyond the Work
+                </h2>
+
+                <div class="space-y-8 max-w-2xl">
+
+                    <!-- Neurascape -->
+                    <article class="flex items-start gap-4">
+                        <span
+                            class="mt-2 block w-1.5 h-1.5 rounded-full bg-accent shrink-0"
+                            aria-hidden="true"
+                        ></span>
+
+                        <div>
+                            <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+                                <h3
+                                    class="text-sm sm:text-base font-bold tracking-tight"
+                                >
+                                    Neurascape
+                                </h3>
+
+                                <a
+                                    href="https://benamuwo.me"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-xs text-muted link-subtle inline-flex items-center gap-1"
+                                    aria-label="Visit Ben Amuwo's Neurascape"
+                                >
+                                    benamuwo.me
+                                    <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                                </a>
+                            </div>
+
+                            <p
+                                class="mt-2 text-sm text-muted leading-relaxed"
+                            >
+                                A personal digital landscape for writing, images, experiments,
+                                and fragments that do not quite belong in a portfolio or research
+                                archive. Part notebook, part gallery, part evolving map of whatever
+                                has my attention.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <!-- Scuba Diving -->
+                    <article class="flex items-start gap-4">
+                        <span
+                            class="mt-2 block w-1.5 h-1.5 rounded-full bg-accent shrink-0"
+                            aria-hidden="true"
+                        ></span>
+
+                        <div>
+                            <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+                                <h3
+                                    class="text-sm sm:text-base font-bold tracking-tight"
+                                >
+                                    Scuba Diving &amp; Ocean Conservation
+                                </h3>
+
+                                <a
+                                    href="https://instagram.com/beamu_"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-xs text-muted link-subtle inline-flex items-center gap-1"
+                                    aria-label="View Ben Amuwo's scuba diving and ocean photography on Instagram"
+                                >
+                                    Instagram
+                                    <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                                </a>
+                            </div>
+
+                            <p
+                                class="mt-2 text-sm text-muted leading-relaxed"
+                            >
+                                Search-and-rescue certified scuba diver with a longstanding
+                                interest in marine conservation and ecological restoration.
+                                Recent volunteer work included reef-conservation work in
+                                Sabah, Malaysia.
+                            </p>
+
+                            <p
+                                class="mt-3 text-sm text-muted leading-relaxed"
+                            >
+                                The splendor of the abyss calls.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
     </main>
 
 
@@ -400,23 +902,29 @@
     <!-- FOOTER                                       -->
     <!-- ============================================ -->
     <footer class="pb-12 sm:pb-16">
-        <div class="max-w-2xl mx-auto px-6 sm:px-8">
+        <div class="max-w-3xl mx-auto px-6 sm:px-8">
+
             <hr class="rule mb-8">
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                <p class="text-xs font-normal text-muted">
+
+            <div
+                class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4"
+            >
+                <p class="text-xs text-muted">
                     <time datetime="2026">© 2026</time> Ben Amuwo
                 </p>
-                <p class="text-xs font-normal text-muted">
-                    Hailing from the ancestral and unceded territories of <br>
+
+                <p
+                    class="text-xs text-muted leading-relaxed sm:text-right max-w-sm"
+                >
+                    Living and working on the ancestral and unceded territories of
                     the Musqueam, Squamish, and Tsleil-Waututh Nations.
                 </p>
             </div>
-        </div>
 
+        </div>
     </footer>
 
 
-    <!-- Initialize Lucide Icons -->
     <script>
         lucide.createIcons();
     </script>
