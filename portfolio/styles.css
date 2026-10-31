@@ -144,7 +144,7 @@ h4 { font-size: 11px; margin-top: 19px; line-height: 1.7; }
 .research-resources { display: flex; flex-wrap: wrap; gap: 12px 26px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 10px; }
 .research-resources a:hover { text-decoration: underline; }
 .hatchery-feature { display: flex; align-items: center; gap: 30px; padding-block: 29px; border-block: 1px solid var(--line); }
-.hatchery-mark { display: flex; align-items: center; justify-content: center; width: 86px; height: 86px; flex-shrink: 0; border: 1px solid var(--line); color: var(--accent); background: var(--surface); font-size: 53px; line-height: 1; }
+.hatchery-mark { display: block; width: 104px; height: 104px; flex-shrink: 0; object-fit: contain; }
 .hatchery-feature h3 { margin-top: 8px; }
 .hatchery-feature p:not(.eyebrow) { margin-top: 9px; font-size: 13px; }
 .hatchery-feature > .text-link { flex-shrink: 0; margin-left: auto; }
@@ -213,8 +213,8 @@ h4 { font-size: 11px; margin-top: 19px; line-height: 1.7; }
   .research-stages > div + div { border-top: 1px solid var(--line); }
   .research-stages h4 { margin-top: 12px; }
   .research-finding { grid-template-columns: 1fr; gap: 12px; }
-  .hatchery-feature { display: grid; grid-template-columns: 56px 1fr; gap: 20px; }
-  .hatchery-mark { width: 56px; height: 66px; font-size: 40px; }
+  .hatchery-feature { display: grid; grid-template-columns: 72px 1fr; gap: 20px; }
+  .hatchery-mark { width: 72px; height: 72px; }
   .hatchery-feature > .text-link { grid-column: 2; margin: 0; justify-self: start; }
   .about-section { margin-top: 50px; grid-template-columns: 1fr; gap: 25px; }
   .about-section h2 br { display: none; }
