@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ben Amuwo — independent research, AI safety and governance, civic technology, and community-scale systems.">
+  <meta name="description" content="Ben Amuwo — independent research, AI safety and governance, civic technology, and community-scale systems." data-i18n-content="meta.description">
   <meta name="theme-color" content="#f6f7fc">
-  <title>Ben Amuwo — Research, Community, and Humane Futures</title>
+  <title data-i18n="meta.title">Ben Amuwo — Research, Community, and Humane Futures</title>
   <link rel="canonical" href="https://www.benamuwo.com/">
-  <meta property="og:title" content="Ben Amuwo — Research, Community, and Humane Futures">
-  <meta property="og:description" content="Ben Amuwo — independent research, AI safety and governance, civic technology, and community-scale systems.">
+  <meta property="og:title" content="Ben Amuwo — Research, Community, and Humane Futures" data-i18n-content="meta.title">
+  <meta property="og:description" content="Ben Amuwo — independent research, AI safety and governance, civic technology, and community-scale systems." data-i18n-content="meta.description">
   <meta property="og:url" content="https://www.benamuwo.com/">
   <meta property="og:type" content="website">
   <script>
@@ -26,14 +26,26 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="stylesheet" href="styles.css">
+  <script src="translations.js" defer></script>
+  <script src="i18n.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main"><span data-i18n="skip">Skip to content</span></a>
   <header class="masthead wrap" id="top">
-    <a class="wordmark" href="#top" aria-label="Ben Amuwo, back to top">BA<span class="wordmark-dot">.</span><span class="wordmark-label">BEN AMUWO</span></a>
+    <a class="wordmark" href="#top" aria-label="Ben Amuwo, back to top" data-i18n-aria-label="home">BA<span class="wordmark-dot">.</span><span class="wordmark-label">BEN AMUWO</span></a>
     <div class="header-tools">
-      <a class="contact-link" href="mailto:ben.amuwo@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+      <a class="contact-link" href="mailto:ben.amuwo@gmail.com"><span data-i18n="contact">Get in touch</span> <span aria-hidden="true">↗</span></a>
+      <label class="language-control" hidden>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg>
+        <select id="language-select" aria-label="Language" data-i18n-aria-label="language">
+          <option value="en" lang="en">English</option>
+          <option value="fr" lang="fr">Français</option>
+          <option value="nl" lang="nl">Nederlands</option>
+          <option value="zh-Hans" lang="zh-Hans">简体中文</option>
+          <option value="ja" lang="ja">日本語</option>
+        </select>
+      </label>
       <button class="theme-toggle" type="button" aria-label="Switch to dark mode" hidden>
         <svg class="sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
         <svg class="moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.8 13A9 9 0 0 1 11 3.2 9 9 0 1 0 20.8 13Z"/></svg>
@@ -44,13 +56,13 @@
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-heading">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Research · Code · Community</p>
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> <span data-i18n="hero.kicker">Research · Code · Community</span></p>
         <h1 id="hero-heading">Ben Amuwo<span class="accent">.</span></h1>
-        <p class="hero-statement">Understanding intelligence.<br>Building for people.</p>
-        <p class="hero-intro">Biology-trained independent researcher and developer working across computational cognition, human-centred AI, and community-scale systems.</p>
+        <p class="hero-statement"><span data-i18n="hero.line1">Understanding intelligence.</span><br><span data-i18n="hero.line2">Building for people.</span></p>
+        <p class="hero-intro"><span data-i18n="hero.intro">Biology-trained independent researcher and developer working across computational cognition, human-centred AI, and community-scale systems.</span></p>
         <div class="hero-links">
-          <a class="button primary" href="#ai-safety">Explore the work <span aria-hidden="true">↓</span></a>
-          <a class="text-link" href="resume.pdf" download>Résumé <span aria-hidden="true">↓</span></a>
+          <a class="button primary" href="#ai-safety"><span data-i18n="explore">Explore the work</span> <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="resume.pdf" download><span data-i18n="resume">Résumé</span> <span aria-hidden="true">↓</span></a>
           <a class="text-link" href="https://orcid.org/0009-0006-6645-3872" target="_blank" rel="noopener noreferrer">ORCID <span aria-hidden="true">↗</span></a>
         </div>
       </div>
@@ -71,88 +83,88 @@
         <div class="art-caption"><span>TRUTH / HONESTY / VIRYA</span><span>道 · 愛</span></div>
       </div>
     </section>
-    <nav class="section-nav" aria-label="Portfolio sections">
+    <nav class="section-nav" aria-label="Portfolio sections" data-i18n-aria-label="nav.aria">
       <div class="wrap nav-inner">
-        <a href="#ai-safety"><span>01</span> AI Safety</a><a href="#civic"><span>02</span> Civic &amp; Community</a><a href="#research"><span>03</span> Research</a><a href="#other-projects"><span>04</span> Other Projects</a><a href="#beyond"><span>↳</span> Beyond the Work</a>
+        <a href="#ai-safety"><span>01</span> <span data-i18n="nav.safety">AI Safety</span></a><a href="#civic"><span>02</span> <span data-i18n="nav.civic">Civic &amp; Community</span></a><a href="#research"><span>03</span> <span data-i18n="nav.research">Research</span></a><a href="#other-projects"><span>04</span> <span data-i18n="other.title">Other Projects</span></a><a href="#beyond"><span>↳</span> <span data-i18n="beyond.title">Beyond the Work</span></a>
       </div>
     </nav>
     <div class="wrap portfolio-content">
       <section class="work-section" id="ai-safety" aria-labelledby="safety-heading">
-        <div class="section-heading"><span class="section-number">01 /</span><div><h2 id="safety-heading">AI Safety and Governance</h2><p>How we describe, understand, and respond to intelligent systems.</p></div></div>
+        <div class="section-heading"><span class="section-number">01 /</span><div><h2 id="safety-heading"><span data-i18n="safety.title">AI Safety and Governance</span></h2><p><span data-i18n="safety.intro">How we describe, understand, and respond to intelligent systems.</span></p></div></div>
         <div class="safety-grid">
           <article class="project-card notice-card">
-            <p class="eyebrow">Incident response · Policy design</p>
+            <p class="eyebrow"><span data-i18n="notice.category">Incident response · Policy design</span></p>
             <h3><a href="https://benamuwo.me/first-notice" target="_blank" rel="noopener noreferrer">First Notice <span aria-hidden="true">↗</span></a></h3>
-            <p class="project-deck">When an AI incident happens,<br>who needs to know?</p>
-            <p>A proposed Canadian protocol for early notification of AI-agent incidents. An interactive demonstration grounded in a documented Australian case.</p>
-            <div class="notice-diagram" aria-hidden="true"><span>DETECT</span><i></i><span>NOTIFY</span><i></i><span>RESPOND</span></div>
-            <a class="text-link" href="https://benamuwo.me/first-notice" target="_blank" rel="noopener noreferrer">Explore the protocol <span aria-hidden="true">↗</span></a>
+            <p class="project-deck"><span data-i18n="notice.line1">When an AI incident happens,</span><br><span data-i18n="notice.line2">who needs to know?</span></p>
+            <p><span data-i18n="notice.description">A proposed Canadian protocol for early notification of AI-agent incidents. An interactive demonstration grounded in a documented Australian case.</span></p>
+            <div class="notice-diagram" aria-hidden="true"><span><span data-i18n="notice.detect">DETECT</span></span><i></i><span><span data-i18n="notice.notify">NOTIFY</span></span><i></i><span><span data-i18n="notice.respond">RESPOND</span></span></div>
+            <a class="text-link" href="https://benamuwo.me/first-notice" target="_blank" rel="noopener noreferrer"><span data-i18n="notice.link">Explore the protocol</span> <span aria-hidden="true">↗</span></a>
           </article>
           <article class="project-card civilization-card">
-            <p class="eyebrow">AI incident research · Language</p>
+            <p class="eyebrow"><span data-i18n="civil.category">AI incident research · Language</span></p>
             <h3><a href="https://benamuwo.me/schrodingers_civ" target="_blank" rel="noopener noreferrer">Schrödinger’s Civilization <span aria-hidden="true">↗</span></a></h3>
-            <p class="project-deck">What survives the telling?</p>
-            <p>A study of how an AI incident becomes a public story—and how language shapes the research itself. Created for the Apart Research AI Safety Response Sprint.</p>
+            <p class="project-deck"><span data-i18n="civil.deck">What survives the telling?</span></p>
+            <p><span data-i18n="civil.description">A study of how an AI incident becomes a public story—and how language shapes the research itself. Created for the Apart Research AI Safety Response Sprint.</span></p>
             <div class="project-paths">
-              <a href="https://benamuwo.me/schrodingers_civ/atlas/" target="_blank" rel="noopener noreferrer"><span><b>01</b> The Atlas</span><span>The Map ↗</span></a>
-              <a href="https://benamuwo.me/schrodingers_civ/audit/" target="_blank" rel="noopener noreferrer"><span><b>02</b> The Audit</span><span>The Probe ↗</span></a>
-              <a href="https://benamuwo.me/schrodingers_civ/tale/" target="_blank" rel="noopener noreferrer"><span><b>03</b> The Translator’s Tale</span><span>The Song of Stars ↗</span></a>
+              <a href="https://benamuwo.me/schrodingers_civ/atlas/" target="_blank" rel="noopener noreferrer"><span><b>01</b> <span data-i18n="civil.atlas">The Atlas</span></span><span><span data-i18n="civil.map">The Map ↗</span></span></a>
+              <a href="https://benamuwo.me/schrodingers_civ/audit/" target="_blank" rel="noopener noreferrer"><span><b>02</b> <span data-i18n="civil.audit">The Audit</span></span><span><span data-i18n="civil.probe">The Probe ↗</span></span></a>
+              <a href="https://benamuwo.me/schrodingers_civ/tale/" target="_blank" rel="noopener noreferrer"><span><b>03</b> <span data-i18n="civil.tale">The Translator’s Tale</span></span><span><span data-i18n="civil.song">The Song of Stars ↗</span></span></a>
             </div>
-            <details class="resource-details"><summary>Papers &amp; project resources <span aria-hidden="true">+</span></summary><div class="resource-links">
-              <a href="https://benamuwo.me/schrodingers_civ/" target="_blank" rel="noopener noreferrer">Project overview ↗</a>
-              <a href="https://benamuwo.me/schrodingers_civ/atlas/paper/" target="_blank" rel="noopener noreferrer">Atlas paper ↗</a>
-              <a href="https://benamuwo.me/schrodingers_civ/audit/paper/" target="_blank" rel="noopener noreferrer">Audit paper ↗</a>
-              <a href="https://benamuwo.me/schrodingers_civ/tale/prologue/" target="_blank" rel="noopener noreferrer">Begin the tale ↗</a>
-              <a href="https://github.com/RavenSeldon/schrodingers_civ" target="_blank" rel="noopener noreferrer">Research repository ↗</a>
-              <a href="https://benamuwo.me/schrodingers_civ/about/" target="_blank" rel="noopener noreferrer">About the editions ↗</a>
+            <details class="resource-details"><summary><span data-i18n="civil.resources">Papers &amp; project resources</span> <span aria-hidden="true">+</span></summary><div class="resource-links">
+              <a href="https://benamuwo.me/schrodingers_civ/" target="_blank" rel="noopener noreferrer"><span data-i18n="project.overview">Project overview ↗</span></a>
+              <a href="https://benamuwo.me/schrodingers_civ/atlas/paper/" target="_blank" rel="noopener noreferrer"><span data-i18n="civil.atlasPaper">Atlas paper ↗</span></a>
+              <a href="https://benamuwo.me/schrodingers_civ/audit/paper/" target="_blank" rel="noopener noreferrer"><span data-i18n="civil.auditPaper">Audit paper ↗</span></a>
+              <a href="https://benamuwo.me/schrodingers_civ/tale/prologue/" target="_blank" rel="noopener noreferrer"><span data-i18n="civil.begin">Begin the tale ↗</span></a>
+              <a href="https://github.com/RavenSeldon/schrodingers_civ" target="_blank" rel="noopener noreferrer"><span data-i18n="research.repository">Research repository ↗</span></a>
+              <a href="https://benamuwo.me/schrodingers_civ/about/" target="_blank" rel="noopener noreferrer"><span data-i18n="civil.editions">About the editions ↗</span></a>
             </div></details>
           </article>
         </div>
       </section>
       <section class="work-section" id="civic" aria-labelledby="projects-heading">
-        <div class="section-heading"><span class="section-number">02 /</span><div><h2 id="projects-heading">Civic and Community Systems</h2><p>Public-interest software. Local connections. Practical care.</p></div></div>
+        <div class="section-heading"><span class="section-number">02 /</span><div><h2 id="projects-heading"><span data-i18n="civic.title">Civic and Community Systems</span></h2><p><span data-i18n="civic.intro">Public-interest software. Local connections. Practical care.</span></p></div></div>
         <article class="project-row">
-          <div class="project-identity"><p class="eyebrow">Civic technology</p><h3><a href="https://bookworm.guide" target="_blank" rel="noopener noreferrer">Bookworm <span aria-hidden="true">↗</span></a></h3><span class="domain">bookworm.guide</span></div>
-          <div class="project-description"><p>A free, non-commercial map of Little Free Libraries across British Columbia. Built to help people discover, contribute to, and care for a shared local resource.</p><p class="contribution">I built the GeoDjango application, geographic data workflow, community contribution system, and field-mapping process.</p><ul class="tags" aria-label="Technologies and focus"><li>Django / GeoDjango</li><li>GIS</li><li>Community infrastructure</li></ul></div>
+          <div class="project-identity"><p class="eyebrow"><span data-i18n="bookworm.category">Civic technology</span></p><h3><a href="https://bookworm.guide" target="_blank" rel="noopener noreferrer">Bookworm <span aria-hidden="true">↗</span></a></h3><span class="domain">bookworm.guide</span></div>
+          <div class="project-description"><p><span data-i18n="bookworm.description">A free, non-commercial map of Little Free Libraries across British Columbia. Built to help people discover, contribute to, and care for a shared local resource.</span></p><p class="contribution"><span data-i18n="bookworm.contribution">I built the GeoDjango application, geographic data workflow, community contribution system, and field-mapping process.</span></p><ul class="tags" aria-label="Technologies and focus" data-i18n-aria-label="tech.aria"><li>Django / GeoDjango</li><li>GIS</li><li><span data-i18n="community.infrastructure">Community infrastructure</span></li></ul></div>
         </article>
         <article class="project-row">
-          <div class="project-identity"><p class="eyebrow">Community coordination</p><h3><a href="https://humanproject.vercel.app" target="_blank" rel="noopener noreferrer">The HUMA-N Project <span aria-hidden="true">↗</span></a></h3><span class="domain">humanproject.vercel.app</span></div>
-          <div class="project-description"><p>A scrapbook commemorating a high-impact, low-friction donation drive, with highlights for donors and the partnered non-profit organizations.</p><ul class="tags" aria-label="Technologies and focus"><li>Community organizing</li><li>Frictionless philanthropy</li><li>Next.js</li></ul></div>
+          <div class="project-identity"><p class="eyebrow"><span data-i18n="human.category">Community coordination</span></p><h3><a href="https://humanproject.vercel.app" target="_blank" rel="noopener noreferrer">The HUMA-N Project <span aria-hidden="true">↗</span></a></h3><span class="domain">humanproject.vercel.app</span></div>
+          <div class="project-description"><p><span data-i18n="human.description">A scrapbook commemorating a high-impact, low-friction donation drive, with highlights for donors and the partnered non-profit organizations.</span></p><ul class="tags" aria-label="Technologies and focus" data-i18n-aria-label="tech.aria"><li><span data-i18n="community.organizing">Community organizing</span></li><li><span data-i18n="human.philanthropy">Frictionless philanthropy</span></li><li>Next.js</li></ul></div>
         </article>
       </section>
       <section class="work-section" id="research" aria-labelledby="featured-research-heading">
-        <div class="section-heading"><span class="section-number">03 /</span><div><h2 id="featured-research-heading">Featured Research</h2><p>From information being available to information making a difference.</p></div></div>
+        <div class="section-heading"><span class="section-number">03 /</span><div><h2 id="featured-research-heading"><span data-i18n="research.title">Featured Research</span></h2><p><span data-i18n="research.intro">From information being available to information making a difference.</span></p></div></div>
         <article class="research-feature">
-          <div class="research-topline"><p class="eyebrow">Sīdus / Independent computational research</p><span class="eyebrow">2026</span></div>
-          <div class="research-intro"><div><h3>Monitoring<br>Under Scarcity</h3><a class="text-link" href="https://sidus.quest" target="_blank" rel="noopener noreferrer">Explore the Sīdus programme <span aria-hidden="true">↗</span></a></div><div><p class="research-question">How do resource-bounded intelligent systems decide which internal information gets to influence behaviour?</p><p>Ground-truth computational studies separating information available inside a system from information that actually changes what it does.</p></div></div>
+          <div class="research-topline"><p class="eyebrow"><span data-i18n="research.category">Sīdus / Independent computational research</span></p><span class="eyebrow">2026</span></div>
+          <div class="research-intro"><div><h3><span data-i18n="research.monitoring">Monitoring</span><br><span data-i18n="research.scarcity">Under Scarcity</span></h3><a class="text-link" href="https://sidus.quest" target="_blank" rel="noopener noreferrer"><span data-i18n="research.programme">Explore the Sīdus programme</span> <span aria-hidden="true">↗</span></a></div><div><p class="research-question"><span data-i18n="research.question">How do resource-bounded intelligent systems decide which internal information gets to influence behaviour?</span></p><p><span data-i18n="research.description">Ground-truth computational studies separating information available inside a system from information that actually changes what it does.</span></p></div></div>
           <div class="research-stages">
-            <div><div class="stage-label"><span>E0-A</span><span class="stage-status">Completed</span></div><h4>Information → causal use</h4><p>Exact enumeration, eight adversarial controls, and 500 retained training initializations test the distinction.</p><a class="text-link" href="https://sidus.quest/#/results/e0-a" target="_blank" rel="noopener noreferrer">E0-A results ↗</a></div>
-            <div><div class="stage-label"><span>E0-B</span><span class="stage-status">Completed</span></div><h4>What counts as monitoring?</h4><p>Three operational accounts tested. One achieved bounded functional validation; two remained non-identified.</p><a class="text-link" href="https://sidus.quest/research/e0-b" target="_blank" rel="noopener noreferrer">E0-B results ↗</a></div>
-            <div><div class="stage-label"><span>E1</span><span class="stage-status proposed">Proposed</span></div><h4>Monitoring under a budget</h4><p>What happens when several useful monitoring channels compete for limited encoding or routing capacity?</p><a class="text-link" href="https://sidus.quest/#/document/1/10-e1-scarcity-terrarium-bounded-internal-state-monitoring" target="_blank" rel="noopener noreferrer">E1 protocol ↗</a></div>
+            <div><div class="stage-label"><span>E0-A</span><span class="stage-status"><span data-i18n="completed">Completed</span></span></div><h4><span data-i18n="e0a.title">Information → causal use</span></h4><p><span data-i18n="e0a.description">Exact enumeration, eight adversarial controls, and 500 retained training initializations test the distinction.</span></p><a class="text-link" href="https://sidus.quest/#/results/e0-a" target="_blank" rel="noopener noreferrer"><span data-i18n="e0a.link">E0-A results ↗</span></a></div>
+            <div><div class="stage-label"><span>E0-B</span><span class="stage-status"><span data-i18n="completed">Completed</span></span></div><h4><span data-i18n="e0b.title">What counts as monitoring?</span></h4><p><span data-i18n="e0b.description">Three operational accounts tested. One achieved bounded functional validation; two remained non-identified.</span></p><a class="text-link" href="https://sidus.quest/research/e0-b" target="_blank" rel="noopener noreferrer"><span data-i18n="e0b.link">E0-B results ↗</span></a></div>
+            <div><div class="stage-label"><span>E1</span><span class="stage-status proposed"><span data-i18n="proposed">Proposed</span></span></div><h4><span data-i18n="e1.title">Monitoring under a budget</span></h4><p><span data-i18n="e1.description">What happens when several useful monitoring channels compete for limited encoding or routing capacity?</span></p><a class="text-link" href="https://sidus.quest/#/document/1/10-e1-scarcity-terrarium-bounded-internal-state-monitoring" target="_blank" rel="noopener noreferrer"><span data-i18n="e1.link">E1 protocol ↗</span></a></div>
           </div>
-          <div class="research-finding"><span class="eyebrow">Key finding / E0-A</span><p>An informative-but-unused control carried the same hidden-state information as a successful system, with zero behavioural benefit. Information alone was not enough.</p></div>
-          <nav class="research-resources" aria-label="Sīdus research resources"><a href="https://sidus.quest/#/document/2/frontpiece" target="_blank" rel="noopener noreferrer">Master’s scoping document ↗</a><a href="https://sidus.quest/research" target="_blank" rel="noopener noreferrer">Research overview ↗</a><a href="https://doi.org/10.5281/zenodo.22661564" target="_blank" rel="noopener noreferrer">Research record / Zenodo ↗</a><a href="https://github.com/RavenSeldon/Sidus" target="_blank" rel="noopener noreferrer">Source &amp; reproducibility ↗</a></nav>
+          <div class="research-finding"><span class="eyebrow"><span data-i18n="research.findingLabel">Key finding / E0-A</span></span><p><span data-i18n="research.finding">An informative-but-unused control carried the same hidden-state information as a successful system, with zero behavioural benefit. Information alone was not enough.</span></p></div>
+          <nav class="research-resources" aria-label="Sīdus research resources" data-i18n-aria-label="research.resourcesAria"><a href="https://sidus.quest/#/document/2/frontpiece" target="_blank" rel="noopener noreferrer"><span data-i18n="research.scoping">Master’s scoping document ↗</span></a><a href="https://sidus.quest/research" target="_blank" rel="noopener noreferrer"><span data-i18n="research.overview">Research overview ↗</span></a><a href="https://doi.org/10.5281/zenodo.22661564" target="_blank" rel="noopener noreferrer"><span data-i18n="research.record">Research record / Zenodo ↗</span></a><a href="https://github.com/RavenSeldon/Sidus" target="_blank" rel="noopener noreferrer"><span data-i18n="research.source">Source &amp; reproducibility ↗</span></a></nav>
         </article>
       </section>
       <section class="work-section" id="other-projects" aria-labelledby="other-heading">
-        <div class="section-heading"><span class="section-number">04 /</span><div><h2 id="other-heading">Other Projects</h2><p>Space for play, companions, and things still taking shape.</p></div></div>
-        <article class="hatchery-feature"><img class="hatchery-mark" src="assets/hatchery-transparent.webp" alt="Hatchery mascot emerging from a celestial egg" width="312" height="312" loading="lazy" decoding="async"><div><p class="eyebrow">Creative studio · Digital companions</p><h3><a href="https://hatchery.world" target="_blank" rel="noopener noreferrer">The Hatchery <span aria-hidden="true">↗</span></a></h3><p>A creative studio and fledgling ecosystem for CLI companions and Codex Pets.</p></div><a class="text-link" href="https://hatchery.world" target="_blank" rel="noopener noreferrer">hatchery.world ↗</a></article>
+        <div class="section-heading"><span class="section-number">04 /</span><div><h2 id="other-heading"><span data-i18n="other.title">Other Projects</span></h2><p><span data-i18n="other.intro">Space for play, companions, and things still taking shape.</span></p></div></div>
+        <article class="hatchery-feature"><img class="hatchery-mark" src="assets/hatchery-transparent.webp" alt="Hatchery mascot emerging from a celestial egg" width="312" height="312" loading="lazy" decoding="async" data-i18n-alt="hatchery.alt"><div><p class="eyebrow"><span data-i18n="hatchery.category">Creative studio · Digital companions</span></p><h3><a href="https://hatchery.world" target="_blank" rel="noopener noreferrer">The Hatchery <span aria-hidden="true">↗</span></a></h3><p><span data-i18n="hatchery.description">A creative studio and fledgling ecosystem for CLI companions and Codex Pets.</span></p></div><a class="text-link" href="https://hatchery.world" target="_blank" rel="noopener noreferrer">hatchery.world ↗</a></article>
       </section>
       <section class="about-section" aria-labelledby="about-heading">
-        <div><p class="eyebrow">The person behind the projects</p><h2 id="about-heading">A few connected<br> threads.</h2></div>
-        <div><p>I studied Biology with a minor in Psychology at the University of British Columbia, then worked in frontline harm reduction, then health systems, and now integrated youth services.</p><p>Alongside that work, I taught myself full-stack development and applied machine learning. My projects increasingly find the intersections between those strands: computational questions about intelligent systems, public-interest software, and tools that help people connect locally.</p></div>
+        <div><p class="eyebrow"><span data-i18n="about.kicker">The person behind the projects</span></p><h2 id="about-heading"><span data-i18n="about.line1">A few connected</span><br> <span data-i18n="about.line2">threads.</span></h2></div>
+        <div><p><span data-i18n="about.bio">I studied Biology with a minor in Psychology at the University of British Columbia, then worked in frontline harm reduction, then health systems, and now integrated youth services.</span></p><p><span data-i18n="about.work">Alongside that work, I taught myself full-stack development and applied machine learning. My projects increasingly find the intersections between those strands: computational questions about intelligent systems, public-interest software, and tools that help people connect locally.</span></p></div>
       </section>
       <section class="beyond-section" id="beyond" aria-labelledby="beyond-heading">
-        <div class="section-heading"><span class="section-number">↳ /</span><div><h2 id="beyond-heading">Beyond the Work</h2></div></div>
+        <div class="section-heading"><span class="section-number">↳ /</span><div><h2 id="beyond-heading"><span data-i18n="beyond.title">Beyond the Work</span></h2></div></div>
         <div class="beyond-list">
-          <article><div class="beyond-title"><h3>Neurascape</h3><a href="https://benamuwo.me" target="_blank" rel="noopener noreferrer">benamuwo.me ↗</a></div><p>A personal digital landscape for writing, images, experiments, and fragments that do not quite belong in a portfolio or research archive. Part notebook, part gallery, part evolving map of whatever has my attention.</p></article>
-          <article><div class="beyond-title"><h3>Scuba Diving &amp; Ocean Conservation</h3><a href="https://instagram.com/beamu_" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div><p>Search-and-rescue certified scuba diver with a longstanding interest in marine conservation and ecological restoration. Recent volunteer work included reef-conservation work in Sabah, Malaysia.</p><p>The splendor of the abyss calls.</p></article>
-          <article><div class="beyond-title"><h3>Substack</h3><a href="https://benamuwo.substack.com" target="_blank" rel="noopener noreferrer">benamuwo.substack.com ↗</a></div><p>Writing, notes, and ideas in progress.</p></article>
-          <article><div class="beyond-title"><h3>GitHub</h3><a href="https://github.com/RavenSeldon" target="_blank" rel="noopener noreferrer">RavenSeldon ↗</a></div><p>Earlier experiments, open-source projects, and software.</p></article>
+          <article><div class="beyond-title"><h3>Neurascape</h3><a href="https://benamuwo.me" target="_blank" rel="noopener noreferrer">benamuwo.me ↗</a></div><p><span data-i18n="neurascape.description">A personal digital landscape for writing, images, experiments, and fragments that do not quite belong in a portfolio or research archive. Part notebook, part gallery, part evolving map of whatever has my attention.</span></p></article>
+          <article><div class="beyond-title"><h3><span data-i18n="scuba.title">Scuba Diving &amp; Ocean Conservation</span></h3><a href="https://instagram.com/beamu_" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div><p><span data-i18n="scuba.description">Search-and-rescue certified scuba diver with a longstanding interest in marine conservation and ecological restoration. Recent volunteer work included reef-conservation work in Sabah, Malaysia.</span></p><p><span data-i18n="scuba.line">The splendor of the abyss calls.</span></p></article>
+          <article><div class="beyond-title"><h3>Substack</h3><a href="https://benamuwo.substack.com" target="_blank" rel="noopener noreferrer">benamuwo.substack.com ↗</a></div><p><span data-i18n="substack.description">Writing, notes, and ideas in progress.</span></p></article>
+          <article><div class="beyond-title"><h3>GitHub</h3><a href="https://github.com/RavenSeldon" target="_blank" rel="noopener noreferrer">RavenSeldon ↗</a></div><p><span data-i18n="github.description">Earlier experiments, open-source projects, and software.</span></p></article>
         </div>
       </section>
     </div>
   </main>
-  <footer class="footer wrap"><div class="footer-top"><a href="mailto:ben.amuwo@gmail.com">ben.amuwo@gmail.com <span aria-hidden="true">↗</span></a><a class="back-top" href="#top">Back to top ↑</a></div><div class="footer-bottom"><div><p>© 2026 Ben Amuwo</p><p class="footer-values">TRUTH · HONESTY · VIRYA · 道 · 愛</p></div><p class="land-acknowledgement">Living and working on the ancestral and unceded territories of the Musqueam, Squamish, and Tsleil-Waututh Nations.</p></div></footer>
+  <footer class="footer wrap"><div class="footer-top"><a href="mailto:ben.amuwo@gmail.com">ben.amuwo@gmail.com <span aria-hidden="true">↗</span></a><a class="back-top" href="#top"><span data-i18n="backTop">Back to top ↑</span></a></div><div class="footer-bottom"><div><p>© 2026 Ben Amuwo</p><p class="footer-values">TRUTH · HONESTY · VIRYA · 道 · 愛</p></div><p class="land-acknowledgement"><span data-i18n="land">Living and working on the ancestral and unceded territories of the Musqueam, Squamish, and Tsleil-Waututh Nations.</span></p></div></footer>
 </body>
 </html>

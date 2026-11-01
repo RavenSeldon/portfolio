@@ -9,15 +9,18 @@
     explicitChoice = ['light', 'dark'].includes(localStorage.getItem('portfolio-theme'));
   } catch (_) {}
 
+  function themeText(key, fallback) { return window.PortfolioI18n?.t(key) ?? fallback; }
+
   function applyTheme(theme) {
     root.dataset.theme = theme;
     const dark = theme === 'dark';
-    toggle.setAttribute('aria-label', `Switch to ${dark ? 'light' : 'dark'} mode`);
-    label.textContent = dark ? 'Light' : 'Dark';
-    toggle.title = `Switch to ${dark ? 'light' : 'dark'} mode`;
+    toggle.setAttribute('aria-label', themeText(dark ? 'toLight' : 'toDark', `Switch to ${dark ? 'light' : 'dark'} mode`));
+    label.textContent = themeText(dark ? 'light' : 'dark', dark ? 'Light' : 'Dark');
+    toggle.title = toggle.getAttribute('aria-label');
     themeColor.content = dark ? '#0d1024' : '#f6f7fc';
   }
 
+  document.addEventListener('portfolio:languagechange', () => applyTheme(root.dataset.theme));
   applyTheme(root.dataset.theme);
   toggle.hidden = false;
   toggle.addEventListener('click', () => {
