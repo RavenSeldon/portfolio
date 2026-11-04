@@ -103,7 +103,16 @@ window.PORTFOLIO_TRANSLATIONS = {
     "backTop": "Retour en haut ↑",
     "land": "Je vis et travaille sur les territoires ancestraux et non cédés des Nations Musqueam, Squamish et Tsleil-Waututh.",
     "meta.title": "Ben Amuwo — Recherche, communauté et futurs humains",
-    "meta.description": "Ben Amuwo — recherche indépendante, sécurité et gouvernance de l’IA, technologie civique et systèmes communautaires."
+    "meta.description": "Ben Amuwo — recherche indépendante, sécurité et gouvernance de l’IA, technologie civique et systèmes communautaires.",
+    "nav.inspiration": "Inspiration",
+    "inspiration.title": "Inspiration et imagination",
+    "inspiration.intro": "Le jeu, le langage et les possibilités du quotidien.",
+    "chess.category": "Jeu",
+    "chess.title": "Les échecs pour tous",
+    "cosmology.category": "Langage",
+    "cosmology.title": "Cosmologie linguistique",
+    "budget.category": "Vie quotidienne",
+    "budget.title": "Le budget pour tous"
   },
   "nl": {
     "skip": "Naar inhoud",
@@ -208,7 +217,16 @@ window.PORTFOLIO_TRANSLATIONS = {
     "backTop": "Terug naar boven ↑",
     "land": "Ik woon en werk op de voorouderlijke en niet-afgestane gebieden van de Musqueam-, Squamish- en Tsleil-Waututh-volkeren.",
     "meta.title": "Ben Amuwo — Onderzoek, gemeenschap en een menswaardige toekomst",
-    "meta.description": "Ben Amuwo — onafhankelijk onderzoek, AI-veiligheid en governance, burgertechnologie en systemen op gemeenschapsniveau."
+    "meta.description": "Ben Amuwo — onafhankelijk onderzoek, AI-veiligheid en governance, burgertechnologie en systemen op gemeenschapsniveau.",
+    "nav.inspiration": "Inspiratie",
+    "inspiration.title": "Inspiratie en verbeelding",
+    "inspiration.intro": "Spel, taal en alledaagse mogelijkheden.",
+    "chess.category": "Spel",
+    "chess.title": "Schaken voor iedereen",
+    "cosmology.category": "Taal",
+    "cosmology.title": "Taalkundige kosmologie",
+    "budget.category": "Dagelijks leven",
+    "budget.title": "Budgetteren voor iedereen"
   },
   "zh-Hans": {
     "skip": "跳转到内容",
@@ -313,7 +331,16 @@ window.PORTFOLIO_TRANSLATIONS = {
     "backTop": "返回顶部 ↑",
     "land": "生活和工作于Musqueam、Squamish和Tsleil-Waututh各民族祖传且未割让的土地上。",
     "meta.title": "Ben Amuwo — 研究、社区与以人为本的未来",
-    "meta.description": "Ben Amuwo — 独立研究、AI安全与治理、公民科技及社区层面的系统。"
+    "meta.description": "Ben Amuwo — 独立研究、AI安全与治理、公民科技及社区层面的系统。",
+    "nav.inspiration": "灵感",
+    "inspiration.title": "灵感与想象",
+    "inspiration.intro": "游戏、语言与日常生活的可能性。",
+    "chess.category": "游戏",
+    "chess.title": "人人都能下国际象棋",
+    "cosmology.category": "语言",
+    "cosmology.title": "语言宇宙学",
+    "budget.category": "日常生活",
+    "budget.title": "人人都能做预算"
   },
   "ja": {
     "skip": "本文へ移動",
@@ -418,7 +445,16 @@ window.PORTFOLIO_TRANSLATIONS = {
     "backTop": "ページ上部へ ↑",
     "land": "Musqueam、Squamish、Tsleil-Waututhの各先住民族が祖先から受け継ぎ、割譲していない土地で暮らし、働いています。",
     "meta.title": "Ben Amuwo — 研究、コミュニティ、人に寄り添う未来",
-    "meta.description": "Ben Amuwo — 独立研究、AIの安全性とガバナンス、シビックテック、地域社会のシステム。"
+    "meta.description": "Ben Amuwo — 独立研究、AIの安全性とガバナンス、シビックテック、地域社会のシステム。",
+    "nav.inspiration": "ひらめき",
+    "inspiration.title": "ひらめきと想像力",
+    "inspiration.intro": "遊び、言葉、そして日常の可能性。",
+    "chess.category": "遊び",
+    "chess.title": "みんなのチェス",
+    "cosmology.category": "言葉",
+    "cosmology.title": "言語の宇宙論",
+    "budget.category": "日々の暮らし",
+    "budget.title": "みんなの予算づくり"
   },
   "en": {
     "dark": "Dark",

@@ -39,7 +39,22 @@ Choose the bucket based on what the project does:
 | Civic and Community Systems | `id="civic"` | Public-interest tools and community initiatives |
 | Featured Research | `id="research"` | Research programmes, studies, protocols and results |
 | Other Projects | `id="other-projects"` | Creative tools, experiments and companions |
+| Inspiration and Imagination | `id="inspiration"` | Play, language, ideas and useful everyday resources |
 | Beyond the Work | `id="beyond"` | Personal writing, interests and profiles |
+
+### Quickest option: add a link card
+
+For a link that does not need a full project description, use **05 / Inspiration and Imagination**:
+
+1. Copy the whole [link-card.html](templates/link-card.html) template into the `<div class="link-grid">` inside `id="inspiration"`, before that grid’s closing `</div>`.
+2. Replace the destination URL, category, title, displayed domain, and `your-project` prefix. Use a unique prefix, such as `new-idea`.
+3. Add the two matching keys (`new-idea.category` and `new-idea.title`) to each of the four language dictionaries, then run the checks below.
+
+That is all the layout work: a fourth, fifth, or sixth card automatically flows into new rows and stacks on smaller screens. Reorder whole `<a class="link-card">…</a>` blocks to reorder cards. To remove one, delete its entire block. No CSS, JavaScript, or navigation edits are needed for individual cards.
+
+You can reuse the same cards in any section by putting them inside `<div class="link-grid">…</div>`. Keep existing links unless you deliberately intend to remove them. Check that shared documents allow the intended audience to view them; a portfolio link does not change the document’s permissions.
+
+### When a project needs more detail
 
 For a simple project, copy the entire `<article>…</article>` from [project-row.html](templates/project-row.html). Paste it inside the relevant section, after an existing article and before that section’s closing `</section>`. In Civic, it will inherit the existing row layout automatically.
 
@@ -174,7 +189,7 @@ CSS controls the displayed size. The checker warns above 150 KB per referenced i
 
 Copy a complete existing `<section>` and give it a unique `id`. Give its heading a unique `id` and match it in `aria-labelledby`. Add a navigation link in `.section-nav`, such as `<a href="#new-section">…</a>`. The active-section script discovers navigation links automatically, in document order. Keep navigation order and section order consistent.
 
-Add translations for the heading, description and navigation label. Keep the menu short: an existing bucket is usually better than a sixth project category.
+Add translations for the heading, description and navigation label. Keep the menu short: an existing bucket is usually better than another project category. The navigation scrolls horizontally when its links need more room.
 
 ### Add a research result
 

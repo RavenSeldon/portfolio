@@ -78,8 +78,8 @@ h1 { margin-top: 23px; font-size: clamp(42px, 4.5vw, 64px); letter-spacing: -.07
 .node { fill: var(--blue); stroke: var(--bg); stroke-width: 2; }
 .art-label { fill: var(--muted); font-size: 8px; letter-spacing: 1px; font-family: 'Space Mono', monospace; }
 .section-nav { position: sticky; top: 0; z-index: 5; background: var(--nav-bg); backdrop-filter: blur(12px); border-block: 1px solid var(--line); }
-.nav-inner { display: flex; align-items: stretch; justify-content: space-between; gap: 20px; }
-.section-nav a { padding: 19px 0 17px; border-bottom: 2px solid transparent; font-size: 10px; white-space: nowrap; }
+.nav-inner { overflow-x: auto; scrollbar-width: thin; display: flex; align-items: stretch; justify-content: space-between; gap: 20px; }
+.section-nav a { flex-shrink: 0; padding: 19px 0 17px; border-bottom: 2px solid transparent; font-size: 10px; white-space: nowrap; }
 .section-nav a > span:first-child { margin-right: 8px; color: var(--muted); font-size: 9px; }
 .section-nav a[aria-current="location"] { border-color: var(--accent); color: var(--accent); }
 .work-section { padding-top: 72px; }
@@ -148,6 +148,16 @@ h4 { font-size: 11px; margin-top: 19px; line-height: 1.7; }
 .hatchery-feature h3 { margin-top: 8px; }
 .hatchery-feature p:not(.eyebrow) { margin-top: 9px; font-size: 13px; }
 .hatchery-feature > .text-link { flex-shrink: 0; margin-left: auto; }
+/* Reusable link cards: the grid adapts automatically when entries are added. */
+.link-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 20px; }
+.link-card { display: flex; flex-direction: column; min-width: 0; padding: 27px; border: 1px solid var(--line); background: var(--surface); break-inside: avoid; }
+.link-card-top { display: flex; justify-content: space-between; align-items: center; gap: 16px; color: var(--accent); }
+.link-card h3 { margin: 22px 0 20px; overflow-wrap: anywhere; }
+.link-card .domain { margin-top: auto; overflow-wrap: anywhere; }
+.link-card:hover, .link-card:focus-visible { border-color: var(--accent); color: var(--ink); }
+.link-card:hover h3, .link-card:focus-visible h3 { color: var(--accent); }
+.link-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
 .about-section { display: grid; grid-template-columns: .8fr 1.2fr; gap: 60px; margin-top: 80px; padding-block: 40px; border-top: 1px solid var(--line); }
 .about-section h2 { margin-top: 17px; font-size: 28px; }
 .about-section p:not(.eyebrow) { font-size: 14px; }
