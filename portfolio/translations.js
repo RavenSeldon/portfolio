@@ -113,7 +113,17 @@ window.PORTFOLIO_TRANSLATIONS = {
     "cosmology.category": "Langage",
     "cosmology.title": "Cosmologie linguistique",
     "budget.category": "Vie quotidienne",
-    "budget.title": "Le budget pour tous"
+    "budget.title": "Le budget pour tous",
+    "seventh.category": "Recherche multi-agents · Parties prenantes absentes",
+    "seventh.question": "Qui protège la partie absente de la table ?",
+    "seventh.explore": "Explorer l’observatoire",
+    "seventh.description": "Six agents d’IA représentant des districts partagent un bassin versant synthétique ; une communauté en aval ne dispose d’aucun agent. Une expérience factorielle teste si des informations vérifiées et un signalement direct contribuent à protéger cette partie absente.",
+    "seventh.scope": "96 épisodes d’évaluation · 24 scénarios appariés · Une configuration de modèle",
+    "seventh.finding": "Aucune des deux hypothèses principales n’a satisfait au critère de soutien préenregistré. Ces résultats ne démontrent pas la protection de communautés réelles.",
+    "seventh.resources": "Ressources de recherche de The Seventh Seat",
+    "seventh.paper": "Lire l’article ↗",
+    "seventh.pdf": "PDF de lecture ↓",
+    "seventh.records": "Code et archives de recherche ↗"
   },
   "nl": {
     "skip": "Naar inhoud",
@@ -228,7 +238,17 @@ window.PORTFOLIO_TRANSLATIONS = {
     "cosmology.category": "Taal",
     "cosmology.title": "Taalkundige kosmologie",
     "budget.category": "Dagelijks leven",
-    "budget.title": "Budgetteren voor iedereen"
+    "budget.title": "Budgetteren voor iedereen",
+    "seventh.category": "Multi-agentonderzoek · Afwezige belanghebbenden",
+    "seventh.question": "Wie beschermt de partij die niet aan tafel zit?",
+    "seventh.explore": "Verken het observatorium",
+    "seventh.description": "Zes AI-districtsagenten delen een synthetisch stroomgebied; een gemeenschap stroomafwaarts heeft geen eigen agent. Een factoriële proef onderzoekt of geverifieerde informatie en rechtstreeks rapporteren die afwezige partij helpen beschermen.",
+    "seventh.scope": "96 evaluatie-episodes · 24 gematchte scenario’s · Eén modelconfiguratie",
+    "seventh.finding": "Geen van beide primaire hypothesen voldeed aan het vooraf geregistreerde criterium voor ondersteuning. Deze resultaten tonen geen bescherming van echte gemeenschappen aan.",
+    "seventh.resources": "Onderzoeksbronnen van The Seventh Seat",
+    "seventh.paper": "Lees het artikel ↗",
+    "seventh.pdf": "Leesversie als PDF ↓",
+    "seventh.records": "Code en onderzoeksgegevens ↗"
   },
   "zh-Hans": {
     "skip": "跳转到内容",
@@ -343,7 +363,17 @@ window.PORTFOLIO_TRANSLATIONS = {
     "cosmology.category": "语言",
     "cosmology.title": "语言宇宙学",
     "budget.category": "日常生活",
-    "budget.title": "人人都能做预算"
+    "budget.title": "人人都能做预算",
+    "seventh.category": "多智能体研究 · 缺席的利益相关方",
+    "seventh.question": "谁来保护未能入席的一方？",
+    "seventh.explore": "探索观测站",
+    "seventh.description": "六个代表不同地区的 AI 智能体共享一个模拟流域；下游社区没有自己的智能体。一项析因实验检验：经过核实的信息与直接报告渠道是否有助于保护这一缺席方。",
+    "seventh.scope": "96 次评估运行 · 24 个配对场景 · 一种模型配置",
+    "seventh.finding": "两项主要假设均未达到预注册的支持判据。这些结果不能证明现实社区得到了保护。",
+    "seventh.resources": "The Seventh Seat 研究资源",
+    "seventh.paper": "阅读论文 ↗",
+    "seventh.pdf": "阅读版 PDF ↓",
+    "seventh.records": "代码与研究记录 ↗"
   },
   "ja": {
     "skip": "本文へ移動",
@@ -458,7 +488,17 @@ window.PORTFOLIO_TRANSLATIONS = {
     "cosmology.category": "言葉",
     "cosmology.title": "言語の宇宙論",
     "budget.category": "日々の暮らし",
-    "budget.title": "みんなの予算づくり"
+    "budget.title": "みんなの予算づくり",
+    "seventh.category": "マルチエージェント研究 · 不在の利害関係者",
+    "seventh.question": "議論の席にいない当事者を、誰が守るのか？",
+    "seventh.explore": "観測サイトを見る",
+    "seventh.description": "6つの地区を代表するAIエージェントが模擬流域を共有し、下流のコミュニティには独自のエージェントがいない。要因実験により、検証済みの情報と直接報告する経路が、この不在の当事者の保護に役立つかを検証する。",
+    "seventh.scope": "評価96エピソード · 対応する24シナリオ · 1つのモデル構成",
+    "seventh.finding": "2つの主要仮説はいずれも事前登録した支持基準を満たさなかった。これらの結果は、現実のコミュニティが保護されることを示すものではない。",
+    "seventh.resources": "The Seventh Seatの研究資料",
+    "seventh.paper": "論文を読む ↗",
+    "seventh.pdf": "閲覧用PDF ↓",
+    "seventh.records": "コードと研究記録 ↗"
   },
   "en": {
     "dark": "Dark",

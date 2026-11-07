@@ -109,6 +109,15 @@ h3 a span { font-size: 18px; font-weight: 400; color: var(--accent); white-space
 .resource-details[open] summary > span[aria-hidden] { transform: rotate(45deg); }
 .resource-links { display: flex; flex-wrap: wrap; gap: 12px 20px; padding-top: 18px; font-size: 10px; }
 .resource-links a { text-decoration: underline; }
+.seventh-card { grid-column: 1 / -1; display: grid; grid-template-columns: .8fr 1.2fr; gap: 44px; scroll-margin-top: 95px; }
+.seventh-card > div { min-width: 0; }
+.seventh-identity .eyebrow { color: var(--accent); }
+.seventh-evidence > p { font-size: 13px; }
+.seventh-evidence .seventh-scope { margin-top: 20px; color: var(--accent); font-size: 10px; line-height: 1.9; }
+.seventh-evidence .seventh-finding { margin-top: 14px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--ink); font-size: 12px; }
+.seventh-card .text-link, .seventh-card .resource-links a { min-height: 44px; display: inline-flex; align-items: center; }
+.seventh-card .resource-links { gap: 6px 22px; }
+@media (max-width: 760px) { .seventh-card { grid-template-columns: 1fr; gap: 24px; } }
 .project-row { border-top: 1px solid var(--line); display: grid; grid-template-columns: .8fr 1.2fr; gap: 60px; padding-block: 30px; }
 .project-row:last-child { border-bottom: 1px solid var(--line); }
 .project-identity .eyebrow { color: var(--accent); }
